@@ -1,0 +1,7 @@
+Today i learnt some of the new commands and practised in my privat repository.
+-git diff --color-word [commitid1] [commitid]:It is quite evident that we are seeing the latest changes in the above screenshot in the green color. But the red color sentence is not needed that much. Since sometimes, we are interested only in the changed text and not how it looked previously. This does not mean we do not want to see the changes that have happened or the difference. We will clear it out by using an option color word in diff command.
+-git diff HEAD :it shows the difference between current commit and latest changes in file content.  
+-git diff HEAD:[filename.txt][filename.txtgit ] :show the diffrence between tdiffwo files
+-git diff --color-words [commitid1] [commitid]:this shows the content changed from first commit id with second commit id using white and green color respectively and if we reverse the commit it it shows what we hve deleted in red color with repects to our commit id
+then i checked tomorrows task and its videos and practice seesions that have to be done by the day.
+then searched some extra commands on internet to be done and needs to be practiced.
