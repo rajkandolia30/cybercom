@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>avg of matches
+        </title>
+    </head>
+     this is third practical
+<script type="text/javascript">
+ 
+
+var jt_game_1=89;
+var jt_game_2=120;
+var jt_game_3=103;
+console.log('score of john'+jt_game_1+' '+jt_game_2+' '+jt_game_3);
+
+var mt_game_1=116;
+var mt_game_2=94;
+var mt_game_3=123;
+console.log('score of mark'+mt_game_1+' '+mt_game_2+' '+mt_game_3);
+
+var avg_jt=(jt_game_1+jt_game_2+jt_game_3)/3;
+console.log('average of john team '+avg_jt);
+
+var avg_mt=(mt_game_1+mt_game_2+mt_game_3)/3;
+console.log('average of mark team '+avg_mt);
+
+
+if(avg_jt>avg_mt)
+{
+    console.log('winner is john team with the score of '+ avg_jt);
+}
+
+else
+{
+    console.log('winner is john team with the score of '+ avg_mt);
+}
+
+var mary_game_1=116;
+var mary_game_2=94;
+var mary_game_3=123;
+console.log('score of mary'+mary_game_1+' '+mary_game_2+' '+mary_game_3);
+
+var avg_mary=(mary_game_1+mary_game_2+mary_game_3)/3;
+console.log('average of mary team '+avg_mary);
+
+if(avg_mary>avg_jt && avg_mary>avg_mt)
+{
+console.log('winner is marry in three of them');
+}
+else if (avg_jt>avg_mary && avg_jt>avg_mt)
+{
+console.log('winner is john in three of them');
+}
+else if (avg_mt>avg_jt && avg_mt>avg_mary)
+{
+console.log('winner is mark in three of them');
+}
+else
+{
+console.log('its a tie');
+}
+ 
+   if(avg_jt == avg_mary)
+   {
+     console.log('tie between john and marry');
+     console.log(avg_jt,avg_mary)
+    }
+        else if (avg_jt == avg_mt)
+        {
+        console.log('tie between john and mark');
+        console(avg_jt,avg_mary);
+        }
+        else if (avg_mary == avg_mt)
+        {
+        console.log('tie between mark and marry');
+        console.log(avg_mary,avg_mt);
+        }
+        else 
+        {
+        console.log('there is no tie');
+        }
+
+
+
+
+</script>
+
+</html>
