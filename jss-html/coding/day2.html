@@ -1,0 +1,131 @@
+<html>
+<head>
+    <title>day 2</title>
+    </head>
+ <h1>day 2 practice </h1>
+ <script type="text/javascript">
+
+//ternary operator
+var firstname='raj';
+var age='22';
+
+age>=18 ? console.log(firstname +'  is 18+'):console.log(firstname +'she is 18-');
+
+
+var age_of_raj= age>=18?'greter than 18':'smaller than 18';
+console.log(age_of_raj);
+
+//switch operation
+var hobby='dancing';
+switch(hobby)
+{
+    case 'reading':
+        console.log('her hobby is reading');
+        break;
+    case 'writing':
+        console.log('her hobby is writing');
+        break;
+    case 'dancing':
+        console.log('her hobby is dancing');
+        break;
+    default:
+        console.log('she likes somthing else');
+
+}
+age =22;
+switch (true)
+{
+    case age<=13:
+    console.log('she is 13 or less than 13');
+    break;
+    case age<=20:
+    console.log('she is 20 or less than 20');
+    break;
+    case age<=25:
+    console.log('she is 25 or less than 25');
+    break;
+    default:
+    console.log('she is more than 25');
+}
+
+//truthy and falsy value
+// falsy value means:undefined,null,'empty string',not a number(nan).
+//truthy that are not falsy
+
+age='';
+if(age)
+console.log('it is defined');
+else
+console.log('its not defined');
+
+age=22;
+if(age)
+console.log('it is defined');
+else
+console.log('its not defined');
+
+//equality operation 
+//this says number inth string and withot string are different like '23' and 23 to avoid this kind of confuse we use === operator to distinguise them.
+
+function calculateage(birthyear)//function1
+{
+    return 2020-birthyear;
+}
+
+var age=calculateage(1998); //function call 1
+console.log(age);
+
+function retyear(year,firstname)//function1 that calls fumction1
+{
+    var age=calculateage(year);
+    var retirement=60-age;
+    console.log('retirement years='+ retirement +'name=' + firstname);
+
+}
+
+retyear(1998,'raj');//function call2
+
+//differnet between funtion statement and expression.
+//statement only uses for the actions like function does same as loops ect it doesn't produce results.
+//expression uses for the purpose of some calculation just like expression addtion,subtraction etc it produces then result.
+
+var whatdoyoudo = function(job,firstname)
+{
+    switch(job)
+    {
+        case 'teacher':
+        return firstname +' teacher';
+        case 'dancer':
+        return firstname +' dancer';
+        case 'singer':
+        return firstname +' singer';
+        default:
+        return 'does somthing else';
+    }
+}
+
+console.log(whatdoyoudo('teacher','raj'));
+console.log(whatdoyoudo('dancer','juli'));
+console.log(whatdoyoudo('designer','dhurva'));
+
+//arrays
+var family=['dad','mom','sister','brother'];
+var ages=[55,53,20,18];
+console.log(family);
+console.log(family[3]);
+console.log(family.indexOf('mom'));
+console.log(family.lenght);//
+family[5] ='sister';
+family[family.lenght]='cousin';
+console.log(family);
+ages.push(70);
+ages.unshift(00);
+console.log(ages);
+family.pop();
+console.log(family);
+family.shift();
+console.log(family);
+
+
+</script>
+</html>
