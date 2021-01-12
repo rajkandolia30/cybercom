@@ -1,0 +1,1 @@
+today i have learn about variables in objects.scoping chain.execution stack.function and its declaration.object and its variables,methon and how it is access.continue and break statement this keyword.loops and iterations.and watched all vieos of today. 
