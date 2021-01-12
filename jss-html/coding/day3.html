@@ -1,0 +1,172 @@
+<html>
+    <head>
+        <title>day 3</title>
+    </head>
+<h1>practice day 3</h1>
+    <script type="text/javascript">
+
+    //about scope chain
+ var a='hii';
+ first();
+        function first()
+        {
+            var b='hello';
+            second();
+
+            function second()
+            {
+                var c='hey';
+                third();
+                console.log(a+' '+b+' '+c);
+            }
+        }
+function third()
+{
+    var d='raj';
+    console.log(d);
+    console.log(a+d);
+}
+
+var raj={
+    name:'raj',
+    dob:1998,
+    calculateage:function()
+                {
+                    console.log(this);
+                    console.log(this.name);
+                    console.log(this.dob);
+                    console.log(2021-this.dob +' years old');
+
+                    //now lets call another function inside this function and when we use this keyword it should point to john object but it will not point to john object because when we create a new funtion it will alwaysvpoint to window object or default object.
+                    function boo()
+                    {
+                        console.log(this);
+                    }
+                     boo();
+                }
+}
+
+raj.calculateage();
+
+var prince={
+    name:'prince',
+    dob:1999,
+}
+
+prince.calculateage = raj.calculateage;
+prince.calculateage();//this time this keywrod will point to princee object.
+
+//objects and its properties and way of difining and accessing
+
+var neha={
+        firstname:'neha',
+        lastname:'sharma',
+        dob:1999,
+        family:['mom','dad','sister','brother'],
+        job:'dancer',
+        ismarried: false,
+}
+
+console.log(neha);
+console.log(neha['lastname']);
+console.log(neha['dob']);
+console.log(neha.firstname);
+console.log(neha.lastname);
+console.log(neha.dob);
+console.log(neha.family);
+console.log(neha.family[3]);
+console.log(neha.job);
+console.log(neha.ismarried);
+var dateofbirth='dob';
+console.log(neha[dateofbirth]);
+neha.job='singer';
+console.log(neha.job);
+neha['ismarried']='true';
+console.log(neha.ismarried);
+
+var rahul = new Object();
+rahul.firstname ='rahul';
+rahul.lastname ='sharma';
+rahul['job'] ='dancer';
+console.log(rahul);
+ 
+
+ //objects and its methods
+var raj={
+        firstname:'raj',
+        lastname:'kandolia',
+        dob:1998,
+        family:['mom','dad','sister','brother'],
+        job:'dancer',
+        ismarried: false,
+        calage: function(dob)
+                    {
+                         return 2021-dob;  
+                        //or  return 2021-this.dob;
+                    }
+}
+console.log(raj);
+//console.log(raj.calage()); without argument in function and using this keyword.
+//or
+console.log(raj.calage(raj.dob));
+//or
+//console.log(raj.calage(1998));
+
+//creating age from the function inside the object and store it into new variable
+
+raj.age=raj.calage(raj.dob);
+console.log(raj.age);
+
+//loops and iteration
+
+//for loop
+for(var i=0; i<=10; i++)
+    {
+        console.log(i);
+    }
+
+var family=['dad','mom','sister','brother'];
+
+for(var i=0; i < family.length; i++)
+{
+    console.log(family[i]);
+}
+
+//while loop
+
+var i=0;
+while(i<family.length)
+{
+    console.log(family[i]);
+    i++;    
+}
+
+//continue and break statement
+
+var raj=['raj','kandolia',23,1998,'dancing'];
+for (var i=0; i<raj.length; i++)
+    {
+        if(typeof raj[i] !== 'string') continue;//it will continue from next iteration and does not print this result
+        console.log(raj[i]);
+
+    }
+
+
+for (var i=0; i<raj.length; i++)
+    {
+        if(typeof raj[i] !== 'string') break;//it will break the iteration from current iteration and does not print any further result
+        console.log(raj[i]);
+
+    }
+
+//reverse of loop
+for(var i=raj.length-1; i>=0; i--)
+{
+    console.log(raj[i]);
+}
+
+
+
+
+</script>
+</html>
