@@ -1,0 +1,7 @@
+today i have learnt function calling functions
+bind call appply
+versions of es5 and es6
+differrent between it
+watched all videos 
+practiced it
+dodne today's practical
