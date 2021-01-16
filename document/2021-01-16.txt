@@ -1,0 +1,6 @@
+today watched all videos.
+function calling another fuctionimmediatly 
+invoke function expression used for data privacy
+closures:an inner function has always access to its  outer funtion variables and parameters even if that/outer function has retunrd.
+bind, call, apply
+some of diffrent between es5 and es6
