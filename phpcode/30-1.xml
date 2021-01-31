@@ -1,0 +1,40 @@
+<family>
+        <member>
+            <name>Nirali</name>
+            <age>20</age>
+            <education>
+                        <school>N.K.D.A.V public school</school>
+            </education>
+            <education>
+                        <degree>KUDALIYA</degree>
+            </education>
+        </member>
+        
+        <member>
+            <name>Raj</name>
+            <age>19</age>
+            <education>
+                        <school>N.K.D.A.V public school</school>
+            </education>
+            <education>
+                        <diploma>A.V.P.T.I</diploma>
+            </education>
+            <education>
+                        <degree>S.L.T.I.E.T</degree>
+            </education>
+        </member>
+        
+        <member>
+            <name>Prince</name>
+            <age>18</age>
+            <education>
+                        <school>N.K.D.A.V public school</school>
+            </education>
+            <education>
+                        <diploma>A.V.P.T.I</diploma>
+            </education>
+            <education>
+                        <degree>S.L.T.I.E.T</degree>
+            </education>
+        </member>
+</family>
