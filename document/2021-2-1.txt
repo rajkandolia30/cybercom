@@ -1,0 +1,18 @@
+practiced and watched this videos and still completing the all task given.
+-File Handling- Appending a File.
+-The explode and implode Function with File Handling Example.
+-File Handling- Listing Files.
+-Listing Files .
+-Checking if a File Exists.
+-Deleting and Renaming Files.
+-Uploading Files.
+-Uploading Files- Restricting File Extensions .
+-Creating a non-unique Hit Counter.
+-Creating a File Based Unique Hit Counter.
+-MD5 Encryption.
+-Sending an Email . 
+-Creating a Simple Contact Form.
+-An Introduction to XML.
+-Reading a Simple XML File.
+-An Introduction to Databases.
+-More About Databases.
