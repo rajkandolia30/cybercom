@@ -1,0 +1,17 @@
+table{
+        border:groove;
+        background-color:lightgrey;
+        
+    }
+th,td{
+        border:double  1px;
+        background-color:lightblue;
+        padding:2px 20px 2px 5px;
+     
+    }
+th{
+        background-color:#FFF2AF;
+        color:red;
+        border-color:black;
+    }
+    

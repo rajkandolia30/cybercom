@@ -38,21 +38,12 @@ echo $xml->member[2]->name.' is '.$xml->member[0]->age.'<br>';*/
 foreach ($xml->member as $member){
      echo $member->name.' is '.$member->age.'<br>';
     
-    foreach($member->education as $school){
-        echo 'School-'.$school->school.'<br>';
-        echo 'diploma-'.$school->diploma.'<br>';
-        echo 'degree-'.$school->degree.'<br>';
+    foreach($member->education as $edu){
+        foreach($edu->school as $sch){echo 'School-'.$sch.'<br>';}
+        foreach($edu->diploma as $dip){echo 'diploma-'.$dip.'<br>';}
+        foreach($edu->degree as $deg){echo 'degree-'.$deg.'<br>';}
     }
 }
-    
-    
-    
-
-    
-    
-
-
-
 ?>
 
 <form action="30-1.php" method="POST">

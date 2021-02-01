@@ -1,0 +1,15 @@
+table{
+    background-color:#191970;
+}
+.color{
+    background-color:#ffa500;
+}
+.left{
+    text-align:left;
+}
+.right{
+    text-align:right;
+}
+th,td{
+    padding:4px;
+}
