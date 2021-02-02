@@ -1,3 +1,50 @@
+<?php 
+    if(isset($_POST['name'])
+   || isset($_POST['email'])
+   || isset($_POST['time']) 
+   || isset($_POST['classes'])
+   || isset($_POST['gender'])
+   || isset($_POST['checkbox'])){
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $gender=$_POST['gender'];
+        $checkbox=$_POST['checkbox'];
+        $time=$_POST['time'];
+        $classes=$_POST['classes'];
+            if(!empty($name) 
+            || !empty($email) 
+            || !empty($checkbox) 
+            || !empty($gender) 
+            || !empty($subject) 
+            || !empty($time) 
+            || !empty($classes)){
+                if(!empty($name) 
+                    && !empty($email) 
+                    && !empty($gender) 
+                    && !empty($checkbox)){
+                        if(empty($_POST['subject'])){
+                            echo 'Select atleast 1 game';
+                        }else{
+                              foreach($_POST['subject'] as $value){
+                                      echo '<strong>Game selected:</strong> '.$value.'<br>';
+                                }
+                echo '<strong>Name: </strong>'.$name.'<br>';
+                echo '<strong>Email: </strong>'.$email.'<br>';
+                echo '<strong>Time: </strong>'.$time.'<br>';
+                echo '<strong>Any information: </strong>'.$classes.'<br>';
+                echo '<strong>Gender: </strong>'.$gender.'<br>';
+                }
+        }else{
+                echo '<strong>*Please enter MANDATORY fields</strong>';
+            }
+        }else{
+            echo '<strong>Please enter all fields</strong>';
+        } 
+
+}
+        
+?>
+
 <html>
     <head><title>form</title>
     <style>
@@ -47,42 +94,3 @@
 </form>
 </html>
 
-<?php 
-
-   if(isset($_POST['name'])
-   && isset($_POST['email'])
-   && isset($_POST['time']) 
-   && isset($_POST['classes'])
-   && isset($_POST['gender'])
-   && isset($_POST['checkbox'])){
-        $name=$_POST['name'];
-        $email=$_POST['email'];
-        $gender=$_POST['gender'];
-        $checkbox=$_POST['checkbox'];
-        $time=$_POST['time'];
-        $classes=$_POST['classes'];
-            if(!empty($name) 
-            && !empty($email) 
-            && !empty($gender) 
-            && !empty($checkbox)){
-                if(empty($_POST['subject'])){
-                    echo '<strong>You must select atleast 1 subject<strong>';
-                }else{
-                      foreach($_POST['subject'] as $value){
-                          echo '<strong>Subject selected: </strong>'.$value.'<br>';
-                      }
-                echo '<strong>Name: </strong>'.$name.'<br>';
-                echo '<strong>Email: </strong>'.$email.'<br>';
-                echo '<strong>Time: </strong>'.$time.'<br>';
-                echo '<strong>Any information: </strong>'.$classes.'<br>';
-                echo '<strong>Gender </strong>'.$gender.'<br>';
-                
-            }
-        }else{
-                echo '<strong>*Please enter MANDATORY fields</strong>';
-            }
-}else{
-    echo '<strong>Please enter all fields</strong>';
-} 
-        
-?>

@@ -1,0 +1,15 @@
+table{
+    border:solid black 5px;
+    background-color:pink;
+}
+.center{
+    text-align:center;
+}
+.a{
+    background-color:darkorange;
+    color:white;
+}
+.b{
+    background-color:yellow;
+    color:black;
+}

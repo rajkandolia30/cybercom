@@ -1,0 +1,11 @@
+table{
+    border:solid grey 10px;
+}
+th{
+    color:white;
+    background-color:#ff6347;
+}
+.button{
+    background-color:green;
+    color:white;
+}
