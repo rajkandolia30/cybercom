@@ -1,4 +1,4 @@
-console.log('Form submission');
+
 function valid(){
     var name=document.getElementById('name').value;
     var password=document.getElementById('password').value;
@@ -7,25 +7,34 @@ function valid(){
     var gender=get_val('gender');
     var age=document.getElementById('age').value;
     var file=document.getElementById('file').value;
-       if(name.trim().length==0
+            if(name.trim().length==0
             || password.trim().length==0
             || address.trim().length==0
             || game.trim().length==0
             || gender.trim().length==0
             || age.trim().length==0
             || file.trim().length==0){
-            if(name.trim().length==0) {
-                 document.getElementById('name').placeholder='PLEASE ENTER THE NAME';
-             }  
-            if(password.trim().length==0) {
-                 document.getElementById('password').placeholder='PLEASE ENTER THE PASSWORD';
-             }
-            if(age.trim().length==0) {
-                 document.getElementById('age').placeholder='PLEASE ENTER THE AGE';
-             }
-            if(address.trim().length==0) {
-                 document.getElementById('address').placeholder='PLEASE ENTER ADDRESS';
-             }
+                    if(name.trim().length==0) {
+                        document.getElementById('name_error').innerHTML='PLEASE ENTER THE NAME';
+                    }
+                    if(password.trim().length==0) {
+                        document.getElementById('password_error').innerHTML='PLEASE ENTER THE NAME';
+                    }
+                    if(address.trim().length==0) {
+                        document.getElementById('address_error').innerHTML='PLEASE ENTER ADDRESS';
+                    }
+                    if(game.trim().length==0) {
+                        document.getElementById('game_error').innerHTML='PLEASE ENTER GAME';
+                    }
+                    if(gender.trim().length==0) {
+                        document.getElementById('gender_error').innerHTML='PLEASE SELECT GENDER';
+                    }
+                    if(age.trim().length==0) {
+                        document.getElementById('age_error').innerHTML='PLEASE SELECT GENDER';
+                    }
+                    if(file.trim().length==0) {
+                        document.getElementById('file_error').innerHTML='PLEASE SELECT GENDER';
+                    }
             
             
         return false;

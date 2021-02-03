@@ -13,3 +13,18 @@ table{
     background-color:yellow;
     color:black;
 }
+.error{
+    position:absolute;
+    padding:0px;
+
+}
+.error p{
+    font-size:10px;
+     color:red;
+     padding:0px;
+     margin:0px;
+
+}
+td {
+	padding: 10px;
+}

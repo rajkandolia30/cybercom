@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['submit'])){
+/*if(isset($_POST['submit'])){
     $name=$_POST['name'];
     $password=$_POST['password'];
     $address=$_POST['address'];
@@ -33,6 +33,9 @@ if(isset($_POST['submit'])){
                     if(empty($address)){
                         echo 'PLEASE ENTER THE ADDRESS'.'<br>';
                     }
+                    if(empty($game)){
+                        echo 'PLEASE SELECT THE GAME'.'<br>';
+                    }
                     if(empty($gender)){
                         echo 'PLEASE SELECT GENDER'.'<br>';
                     }
@@ -63,8 +66,31 @@ if(!empty($name)
                         echo 'Game selected: '.$value.'<br>';
                     }
                 }
-        }   
-}    
+
+    foreach($_POST['game'] as $value){
+    $game.=$value.',';
+    }
+                
+    $error='Coudn\'t connected';
+    $host='localhost';
+    $user='root';
+    $password_con='';
+    $database='forms';
+    $con=mysqli_connect($host, $user, $password_con ,$database);
+        if($con){
+                echo 'connected to '.$database.'<br>';
+                $insert="INSERT INTO form1 (name,password,address,game,gender,age,file) VALUES ('$name','$password','$address','$game','$gender','$age','$file')";
+                    if(mysqli_query($con,$insert)){
+                          echo '<strong>Inserted data succesfully.</strong><br>';
+                    }else{
+                           echo '<strong>There was an error inserting data<br>';
+                    }
+        }else{
+                echo 'connection not established'.'<br>';
+        }
+                
+    }   
+}    */
                  
 ?>
 
@@ -83,17 +109,20 @@ if(!empty($name)
 
 <tr>
 <td>Enter Name</td>
-<td><input type="text" name="name" id="name"></td>
+<td><input type="text" name="name" id="name">
+<div class="error"><p id="name_error"></p></div></td>
 </tr>
 
 <tr>
 <td>Enter Password</td>
-<td><input type="password" name="password" id="password"></td>
+<td><input type="password" name="password" id="password">
+<div class="error"><p id="password_error"></p></div></td>
 </tr>
 
 <tr>
 <td>Enter Address</td>
-<td><textarea name="address" cols="22" rows="4" id="address"></textarea></td>
+<td><textarea name="address" cols="22" rows="4" id="address"></textarea>
+<div class="error"><p id="address_error"></p></div></td>
 </tr>
 
 <tr>
@@ -102,22 +131,26 @@ if(!empty($name)
     <input type="checkbox" name="game[]" id="Football" value="Football" multiple>Football<br>
     <input type="checkbox" name="game[]" id="Badminton" value="Badminton" multiple>Badminton<br>
     <input type="checkbox" name="game[]" id="Cricket" value="Cricket" multiple>Cricket<br>
-    <input type="checkbox" name="game[]" id="Vollyball" value="Vollyball" multiple>Vollyball<br></td>
+    <input type="checkbox" name="game[]" id="Vollyball" value="Vollyball" multiple>Vollyball<br>
+    <div class="error"><p id="game_error"></p></div></td>
 </tr>
 
 <tr>
 <td>Gender</td>
 <td><input type="radio" name="gender" value="female" id="female">Female
-    <input type="radio" name="gender" value="male" id="male">Male</td>
+    <input type="radio" name="gender" value="male" id="male">Male
+    <div class="error"><p id="gender_error"></p></div></td>
 </tr>
 
 <tr>
 <td>Select your age</td>
-<td><input type="number" placeholder="select" name="age" id="age"></td>
+<td><input type="number" placeholder="select" name="age" id="age">
+<div class="error"><p id="age_error"></p></div></td>
 </tr>
 
 <tr>
-<td colspan="2"><center><input type="file" name="file" id="file"></center></td>
+<td colspan="2"><center><input type="file" name="file" id="file"></center>
+<div class="error"><p id="file_error"></p></div></td>
 </tr>
 
 <tr>

@@ -1,5 +1,8 @@
 table{
     border:solid grey 10px;
+    height:50%;
+    widht:100%;
+   
 }
 th{
     color:white;
@@ -8,4 +11,19 @@ th{
 .button{
     background-color:green;
     color:white;
+}
+.error{
+    position:absolute;
+    padding:0px;
+
+}
+.error p{
+    font-size:10px;
+     color:red;
+     padding:0px;
+     margin:0px;
+
+}
+td {
+	padding: 10px;
 }
