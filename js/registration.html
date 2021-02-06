@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>registration</title>
+    <script src="test.js"></script>
+    <style>
+    div{
+        padding:5px;
+    }
+    .container{
+            width:20%;
+            height:400px;
+            float:center;
+            padding:5px;
+            text-align:center;
+            border:solid black 3px;
+        }
+    </style>
+    </head>
+<body>
+<form method="post">
+<div class="container">
+    <div><h3>Registration</h3></div>
+    <div><input type="text"  placeholder="Name" id="name"></div>
+    <div><input type="email" placeholder="Email" id="email"></div>
+    <div><input type="password" placeholder="Password" id="password"></div>
+    <div><input type="password"  placeholder="Confirm Password" id="confirm_password"></div>
+    <div><select id="city">
+            <option>Select City</option>
+            <option>Rajkot</option>
+            <option>Ahemdabad</option>
+            <option>Baroda</option>
+            <option>Surat</option>
+            </select></div>
+    <div><select id="state">
+            <option>Select State</option>
+            <option>Gujrat</option>
+            <option>Maharashtra</option>
+            <option>Rajasthan</option>
+            <option>Madhya pradesh</option>
+            </select></div>
+    <div><input type="checkbox" name="terms">Terms & Condition</div>
+    <div><button type="button"  onclick="register()">Register</button></div>
+   
+</div>
+</form>
+</body>
+</html>
