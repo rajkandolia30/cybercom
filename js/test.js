@@ -1,4 +1,4 @@
-var array_adminRegister=[];
+var array_array_adminRegister=[];
         //check the terms and condition
 function get_val(value){
     var returnvalue='';
@@ -12,11 +12,11 @@ function get_val(value){
 }
 function password(pass1,pass2){
     var password=document.getElementById('password').value;
-    var confirm_password=document.getElementById('confirm_password');
+    var confirm_password=document.getElementById('confirm_password').value;
     if(password == confirm_password){
-        return true;
+        return document.getElementById('confirm_password').value;
     }else{
-        return false;
+        alert('Incorrect password');
     }
 }
         //get and register the admin
@@ -36,11 +36,11 @@ function register(){
                     city:adminCity,
                     state:adminState,
                 }
-                            if(localStorage.getItem("adminRegister") != null){           //entering second data and checking if exist or not otherwise store it into localstorage
-                                array_adminRegister=JSON.parse(localStorage.getItem("adminRegister"));
+                            if(localStorage.getItem("array_adminRegister") != null){           //entering second data and checking if exist or not otherwise store it into localstorage
+                                array_array_adminRegister=JSON.parse(localStorage.getItem("array_adminRegister"));
                                 var admin_exist='';
-                                        for(var i=0; i < array_adminRegister.length; i++){
-                                            if(array_adminRegister[i]['name'] === adminName){
+                                        for(var i=0; i < array_array_adminRegister.length; i++){
+                                            if(array_array_adminRegister[i]['name'] === adminName){
                                                 admin_exist=true;
                                                 break;
                                             }else{
@@ -48,19 +48,19 @@ function register(){
                                             }
                                         }
                                         if(admin_exist == false){
-                                            array_adminRegister.push(admin_Data);
-                                            localStorage.setItem('adminRegister',JSON.stringify(adminRegister));
+                                            array_array_adminRegister.push(admin_Data);
+                                            localStorage.setItem('array_adminRegister',JSON.stringify(array_array_adminRegister));
                                             alert('Registeration succesfull');
-                                            window.location.replace("dashboard.html");
+                                            window.location.replace("login.html");
                                         }else{
                                             alert('Admin already exist');
                                         }
                                         
                             }else{                      //entering first time data of admin
-                                array_adminRegister.push(admin_Data);
-                                localStorage.setItem('adminRegister',JSON.stringify(adminRegister));
+                                array_array_adminRegister.push(admin_Data);
+                                localStorage.setItem('array_adminRegister',JSON.stringify(array_adminRegister));
                                 alert('Registeration succesfull');
-                                
+                                window.location.replace("login.html");
                             }
             }else{
                 alert('Please enter all fields to register');
@@ -73,17 +73,17 @@ function login(){
 
 	if(userEmail.length != 0 && userPassword.length != 0) {
 		
-		if(localStorage.getItem("adminRegister") != null){
-			array_adminRegister = JSON.parse(localStorage.getItem("adminRegister"));
+		if(localStorage.getItem("array_adminRegister") != null){
+			array_array_adminRegister = JSON.parse(localStorage.getItem("array_adminRegister"));
 			var userExits = '';
-			for (var i = 0; i < array_adminRegister.length; i++) {
-				if(array_adminRegister[i]['email'] === userEmail) {
-					if(array_adminRegister[i]['password'] === userPassword) {
+			for (var i = 0; i < array_array_adminRegister.length; i++) {
+				if(array_array_adminRegister[i]['email'] === userEmail) {
+					if(array_array_adminRegister[i]['password'] === userPassword) {
 						alert('Successfully Log-In');
-						window.location.replace(".html");
+						window.location.replace("dashboard.html");
 					} else {
 						alert('Wrong Password');
-						window.location.replace(".html");	
+						window.location.replace("dashboard.html");	
 					}
 					userExits = true ;
 					break;
@@ -105,4 +105,49 @@ function login(){
 	}	
 }
 
-                                  
+function Add_user(){
+    
+}
+
+
+
+
+
+
+
+
+
+function ini(){
+    if(localStorage.getItem('array_adminRegister') != null){
+        array_adminRegister=JSON.parse(localStorage.getItem('array_adminRegister'));
+        for(var i=0; i<array_adminRegister.length; i++){
+            var name=array_adminRegister[i].name;
+            var email=array_adminRegister[i].email;
+            var password=array_adminRegister[i].password;
+            var birhtdate=array_adminRegister[i].birthdATE;
+            create_table(name,email,password,birthdate);
+        }
+    }
+}
+
+function create_table(name,email, password,birthdate){ 
+//creating a row
+var table=document.getElementById('table');
+var row= table.insertRow();
+var namecell=row.insertCell(0);
+var emailcell=row.insertCell(1);
+var passwordcell=row.insertCell(2);
+var birthdatecell=row.insertCell(3);
+var agecell=row.insertCell(4);
+var actioncell=row.insertCell(5);
+namecell.innerHTML=name;
+emailcell.innerHTML=email;
+passwordcell.innerHTML=password;
+birthdate.innerHTML=birthdate;
+cal_age(birthdate);
+action.innerHtml='Edit delete';
+}
+
+function cal_age(birthdate){
+
+}
