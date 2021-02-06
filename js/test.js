@@ -10,23 +10,25 @@ function get_val(value){
     }
     return returnvalue;
 }
+function password(pass1,pass2){
+    var password=document.getElementById('password').value;
+    var confirm_password=document.getElementById('confirm_password');
+    if(password == confirm_password){
+        return true;
+    }else{
+        return false;
+    }
+}
         //get and register the admin
 function register(){
-    var adminName=document.getElementById('name').value.toLowerCase();
-    var adminEmail=document.getElementById('email').value.toLowerCase();
-    var Password=document.getElementById('password').value.toLowerCase();
-    var ConfirmPassword=document.getElementById('confirm_password').value.toLowerCase();
-    var adminCity=document.getElementById('city').value.toLowerCase();
-    var adminState=document.getElementById('state').value.toLowerCase();
+    var adminName=document.getElementById('name').value;
+    var adminEmail=document.getElementById('email').value;
+    var adminPassword=password('password','confirm_password');
+    var adminCity=document.getElementById('city').value;
+    var adminState=document.getElementById('state').value;
     var terms=get_val('terms');
-            //if both password match or not
-        if( password == ConfirmPassword ){
-            var adminPassword=ConfirmPassword;
-        }else{
-            alert('Password doesn\'t match!!');
-        }
-                
-            if(adminName.length!=0 && adminEmail.length!=0 && adminPassword.length!=0 && adminCity.length!=0 && adminState.length!=0 && terms.length!=0){
+            
+            if(adminName.length != 0 && adminPassword.length != 0){
                 var admin_Data={
                     name:adminName,
                     email:adminEmail,
@@ -49,7 +51,7 @@ function register(){
                                             adminRegister.push(admin_Data);
                                             localStorage.setItem('adminRegister',JSON.stringify(adminRegister));
                                             alert('Registeration succesfull');
-                                            
+                                            window.location.replace("dashboard.html");
                                         }else{
                                             alert('Admin already exist');
                                         }
