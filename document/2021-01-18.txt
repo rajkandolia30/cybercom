@@ -1,5 +1,0 @@
-watched all the video about arrow and  Arrow Functions Basics
- Arrow Functions Lexical 'this' Keyword
- Destructuring
- Arrays in ES6  ES2015
-and all task given 
