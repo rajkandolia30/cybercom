@@ -3,36 +3,38 @@
 <head>
 <style>
 .container{
-    padding:100px;
+    padding:60px;
     padding-left:200px;
-    background-color:black;
-    width:100%;
-    height:20px;
 }
 .box1{
+    display: inline-block;
     background-color:#ff7f50;
-    border:solid black 3px;
+    border:solid black 2px;
     height:50px;
-    width:10%;
+    width:15%;
     padding:30px;
-   
+    
 }
 .box2{
+    display: inline-block;
     background-color:#ff8c00;
-    border:solid black 3px;
+    border:solid black 2px;
     height:50px;
-    width:10%;
+    width:15%;
     padding:30px;
-
 }
 .box3{
+    display: inline-block;
     background-color:#ffebcd;
-    border:solid black 3px;
+    border:solid black 2px;
     height:50px;
-    width:10%;
+    width:15%;
     padding:30px;
 }
-
+.box4{
+  
+    font-size:20px;
+}
 .side{
     height:600px;
     width:10%;
@@ -50,16 +52,19 @@ div{
 <body>
         <div class="side" >
             <div>Hello, <p id="adminname"></p></div>
-            <div>  <a href="dashboard.html">Dashboard</a></div>
+            <div><a href="dashboard.html">Dashboard</a></div>
             <div><a href="user.html">Users</a></div>
             <div><a href="">Login Session</a></div>
             <div><a href="login.html">Logout</a></div>
         </div>
-
+        
         <div class="container">
+            <div><h3>Dashboard<h3></div>
             <div class="box1" ></div>
             <div class="box2" ></div>
             <div class="box3" ></div>
         </div>
+
+        <div class="box4">Today is birthday</div><p id="birthday"></p>
 </body>
 </html>

@@ -1,4 +1,4 @@
-var adminRegister=[];
+var array_adminRegister=[];
         //check the terms and condition
 function get_val(value){
     var returnvalue='';
@@ -37,10 +37,10 @@ function register(){
                     state:adminState,
                 }
                             if(localStorage.getItem("adminRegister") != null){           //entering second data and checking if exist or not otherwise store it into localstorage
-                                adminRegister=JSON.parse(localStorage.getItem("adminRegister"));
+                                array_adminRegister=JSON.parse(localStorage.getItem("adminRegister"));
                                 var admin_exist='';
-                                        for(var i=0; i < adminRegister.length; i++){
-                                            if(adminRegister[i]['name'] === adminName){
+                                        for(var i=0; i < array_adminRegister.length; i++){
+                                            if(array_adminRegister[i]['name'] === adminName){
                                                 admin_exist=true;
                                                 break;
                                             }else{
@@ -48,7 +48,7 @@ function register(){
                                             }
                                         }
                                         if(admin_exist == false){
-                                            adminRegister.push(admin_Data);
+                                            array_adminRegister.push(admin_Data);
                                             localStorage.setItem('adminRegister',JSON.stringify(adminRegister));
                                             alert('Registeration succesfull');
                                             window.location.replace("dashboard.html");
@@ -57,7 +57,7 @@ function register(){
                                         }
                                         
                             }else{                      //entering first time data of admin
-                                adminRegister.push(admin_Data);
+                                array_adminRegister.push(admin_Data);
                                 localStorage.setItem('adminRegister',JSON.stringify(adminRegister));
                                 alert('Registeration succesfull');
                                 
@@ -67,6 +67,42 @@ function register(){
             }
 }
 
+function login(){
+	var userEmail = document.getElementById('email').value.trim().toLowerCase();
+	var userPassword = document.getElementById('password').value.trim().toLowerCase();
 
+	if(userEmail.length != 0 && userPassword.length != 0) {
+		
+		if(localStorage.getItem("adminRegister") != null){
+			array_adminRegister = JSON.parse(localStorage.getItem("adminRegister"));
+			var userExits = '';
+			for (var i = 0; i < array_adminRegister.length; i++) {
+				if(array_adminRegister[i]['email'] === userEmail) {
+					if(array_adminRegister[i]['password'] === userPassword) {
+						alert('Successfully Log-In');
+						window.location.replace(".html");
+					} else {
+						alert('Wrong Password');
+						window.location.replace(".html");	
+					}
+					userExits = true ;
+					break;
+				} else {
+					userExits = false ;
+				}
+			}
+			if(userExits == false) {
+				alert('Registered First');
+				window.location.replace(".html");
+			}
+		}
+		else{
+			alert('Registered First');
+			window.location.replace(".html");
+		}
+	} else {
+		alert('Please enter all value');
+	}	
+}
 
                                   
