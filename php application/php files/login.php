@@ -8,7 +8,7 @@
     
     <form method="post">
         <div>
-        <div>LOGIN</div>
+        <div><center>LOGIN</center></div>
             <div>Email</div>
             <div><input type="email" id="email" name="email"></div>
             <div>Password</div>
