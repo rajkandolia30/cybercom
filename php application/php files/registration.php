@@ -98,6 +98,7 @@ if(isset($_POST['submit'])){
 <html>
     <head>
     <title>registration</title>
+    <link rel="stylesheet" type="text/css" href="../css files/registration.css">
     </head>
 <form action="registration.php" method="POST">
 <table>

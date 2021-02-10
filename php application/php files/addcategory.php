@@ -75,6 +75,7 @@ if(isset($_POST['submit'])){
 <html>
     <head>
     <title>Add category</title>
+    <link rel="stylesheet" type="text/css" href="../css files/addcategory.css">
     </head>
 <table>
 <form method="POST">

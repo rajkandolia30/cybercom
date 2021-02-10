@@ -1,5 +1,6 @@
 <html>
     <head><title>category table</title>
+    <link rel="stylesheet" type="text/css" href="../css files/categorytable.css">
     </head>
 <body>
 

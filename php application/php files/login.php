@@ -2,8 +2,7 @@
 <html>
     <head>
         <title>login</title>
-        <script>
-        </script>
+        <link rel="stylesheet" type="text/css" href="../css files/login.css">
     </head>
 <body>
     
@@ -18,6 +17,5 @@
             <button type="button" id="registration"><a href="registration.php">REGISTRATION</a></button></div>
         </div>
     </form>
-    </script>
 </body>
 </html>
